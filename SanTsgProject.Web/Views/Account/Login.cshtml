@@ -1,0 +1,20 @@
+﻿@model SanTsgProject.Domain.Users.User
+
+<div>@ViewBag.Message</div>
+<form method="post" asp-action="Login">
+    <h1 class="mb-3 row">Login</h1>
+    
+    <div class="mb-3 row">
+        <label class="form-label" asp-for="Email"></label>
+        <input type="email" placeholder="name@example.com" class="form-control" asp-for="Email"/>
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div class="mb-3 row">
+        <label class="form-label" asp-for="Password"></label>
+        <input type="password" placeholder="*****" class="form-control" asp-for="Password"/>
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div class="mb-3 row">
+        <button class="btn btn-outline-primary btn-lg" type="submit">Login</button>
+    </div>
+</form>

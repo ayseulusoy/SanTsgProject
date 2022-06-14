@@ -1,0 +1,33 @@
+﻿@model SanTsgProject.Domain.Users.User
+<form method="post" asp-action="Edit">
+    <h1 class="mb-3 row">Edit</h1>
+    <div class="mb-3 row">
+        <label class="form-label" asp-for="Name"></label>
+        <input type="text" placeholder="Name" class="form-control" asp-for="Name"/>
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="mb-3 row">
+        <label class="form-label" asp-for="Email"></label>
+        <input type="email" placeholder="name@example.com" class="form-control" asp-for="Email"/>
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div class="mb-3 row">
+        <label class="form-label" asp-for="Password"></label>
+        <input type="password" placeholder="*****" class="form-control" asp-for="Password"/>
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div class="mb-3 row">
+        <label class="form-label" asp-for="CreationDate"></label>
+        <input type="text"  class="form-control" readonly asp-for="CreationDate"/>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" asp-for="isActive">
+      <label class="form-check-label">Active</label>
+    </div>
+    <div class="d-grid gap-3 d-md-flex justify-content-md-end">
+        <button class="btn btn-outline-primary btn-lg" type="submit">Save</button>
+        <button class="btn btn-outline-success btn-lg" type="reset">Reset</button>
+        <a  class="btn btn-outline-danger btn-lg" role="button" asp-controller="User" asp-action="Index">Back To List</a>
+    </div>
+</form>
+

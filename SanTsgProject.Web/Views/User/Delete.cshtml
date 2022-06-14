@@ -1,0 +1,17 @@
+﻿@model SanTsgProject.Domain.Users.User
+
+<form method="post" asp-action="Delete">
+    <h1 class="mb-3 row">User Information</h1>
+    <div class="mb-3 row">
+        <label class="form-label" asp-for="Name"></label>
+        <input disabled class="form-control" asp-for="Name"/>
+    </div>
+    <div class="mb-3 row">
+        <label class="form-label" asp-for="Email"></label>
+        <input disabled class="form-control" asp-for="Email"/>
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-outline-primary btn-lg" type="submit">Delete</button>
+        <a  class="btn btn-outline-danger btn-lg" role="button" asp-controller="User" asp-action="Index">Back To List</a>
+    </div>
+</form>

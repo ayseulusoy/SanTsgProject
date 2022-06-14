@@ -1,0 +1,19 @@
+﻿
+@model List<SanTsgProject.Domain.Cities.City>
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+         <tr>
+             <td><a asp-controller="ListHotel" asp-action="Index" asp-route-cityName="@item.Name">@item.Name</a></td>
+         </tr>   
+        }
+    </tbody>
+</table>
